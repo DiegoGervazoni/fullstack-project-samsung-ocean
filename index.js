@@ -1,11 +1,12 @@
+require("dotenv").config();
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
-require("dotenv").config();
 
 //localhost ou 127.0.0.1
 // const DB_URL = "mongodb://127.0.0.1:27017";
-const DB_URL =
-  "mongodb+srv://admin:oitgUbLNtlWkTVZV@cluster0.f91fnru.mongodb.net/";
+const DB_URL = process.env(
+  "mongodb+srv://admin:oitgUbLNtlWkTVZV@cluster0.f91fnru.mongodb.net/"
+);
 const DB_NAME = "primeiro-banco-de-dados-09-02-23";
 
 async function main() {
