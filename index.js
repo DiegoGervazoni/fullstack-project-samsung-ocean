@@ -1,6 +1,6 @@
-require("dotenv").config();
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
+require("dotenv").config();
 
 //localhost ou 127.0.0.1
 // const DB_URL = "mongodb://127.0.0.1:27017";
