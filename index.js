@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const { MongoClient, ObjectId } = require("mongodb");
 
 //localhost ou 127.0.0.1
