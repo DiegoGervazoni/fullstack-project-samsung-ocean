@@ -79,9 +79,10 @@ async function main() {
 
   //Endpoint Delete -> [DELETE] /item/:id
   //Exercicio:
-  // - pesquisar sobre a operacao de remover itens;
-  // -
-  // -
+  // - pesquisar sobre a operacao de remover itens
+  // - implementar o endpoint de delete
+  // - realizar a operação de excluir item
+
   app.listen(3000);
 }
 
