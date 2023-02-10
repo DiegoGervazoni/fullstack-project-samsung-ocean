@@ -51,7 +51,7 @@ async function main() {
     res.send(documentos);
   });
 
-  //Endpoin Read Single By Id -> [GET] /item/:id
+  //Endpoint Read Single By Id -> [GET] /item/:id
   app.get("/item/:id", async function (req, res) {
     const id = req.params.id;
     const item = await collection.findOne({ _id: new ObjectId(id) });
@@ -78,10 +78,11 @@ async function main() {
   });
 
   //Endpoint Delete -> [DELETE] /item/:id
-  //Exercicio:
-  // - pesquisar sobre a operacao de remover itens
-  // - implementar o endpoint de delete
-  // - realizar a operação de excluir item
+  app.delete("/item/:id", async function (req, res) {
+    const id = req.params.id;
+    const item = await collection.deleteOne({ _id: new ObjectId(id) });
+    res.send(item);
+  });
 
   app.listen(3000);
 }
