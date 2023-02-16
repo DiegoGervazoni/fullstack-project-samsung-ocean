@@ -80,8 +80,8 @@ async function main() {
   //Endpoint Delete -> [DELETE] /item/:id
   app.delete("/item/:id", async function (req, res) {
     const id = req.params.id;
-    const item = await collection.deleteOne({ _id: new ObjectId(id) });
-    res.send(item);
+    await collection.deleteOne({ _id: new ObjectId(id) });
+    res.send("Removido com sucesso!");
   });
 
   app.listen(3000);
